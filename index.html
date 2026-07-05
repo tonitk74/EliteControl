@@ -1,7 +1,84 @@
-> 8:32:30 simulator in LOADED state
-8:32:30 UNLOAD process started
-8:33:46 UNLOAD process finished
-8:33:46 - 8:36:40 simulator in UNLOADED state
-8:36:40 LOAD process started
-8:39:50 LOAD process finished
->8:39:50 simulator in LOADED state
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Suito Controller</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+        }
+		
+		.bigPowerButton {
+			font-size: 35px;
+			font-weight: bold;
+			width: 150px;
+			height: 80px;
+		}
+
+        #log {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            height: 200px;
+            overflow-y: auto;
+            background: #f5f5f5;
+            font-family: Consolas, monospace;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Elite Suito FTMS Controller</h1>
+
+    <button id="connectBtn">
+        Yhdistä traineriin
+    </button>
+
+    <button id="requestControlBtn" disabled>
+        Request Control
+    </button>
+	
+	<button id="releaseBtn" disabled>
+		Release Trainer
+	</button>
+
+	<button id="startBtn" disabled>
+		Start Workout
+	</button>
+
+    <div id="log"></div>
+
+	<button id="power0Btn" class="bigPowerButton" disabled>
+		0 W
+	</button>
+	<button id="power130Btn" class="bigPowerButton" disabled>
+		130 W
+	</button>
+	<button id="power165Btn" class="bigPowerButton" disabled>
+		165 W
+	</button>
+	<button id="power200Btn" class="bigPowerButton" disabled>
+		200 W
+	</button>
+
+	<button id="powerDownBtn" class="bigPowerButton" style="width: 315px;" disabled>
+		-
+	</button>
+	<button id="powerUpBtn" class="bigPowerButton" style="width: 315px;" disabled>
+		 +
+	</button>
+
+    <script src="EliteControl.js"></script>
+
+</body>
+</html>
