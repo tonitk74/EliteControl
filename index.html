@@ -6,11 +6,15 @@
     <title>Elite Suito Controller</title>
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
+        * {
+			box-sizing: border-box;
+		}
+		
+		body {
+            font-family: Calibri, sans-serif;
+            max-width: 420px;
+            margin: auto;
+            padding: 5px;
         }
 
         button {
@@ -21,8 +25,8 @@
 		.bigPowerButton {
 			font-size: 35px;
 			font-weight: bold;
-			width: 150px;
-			height: 80px;
+			width: 180px;
+			height: 65px;
 		}
 
         #log {
@@ -38,26 +42,7 @@
 </head>
 <body>
 
-    <h1>Elite Suito FTMS Controller</h1>
-
-    <button id="connectBtn">
-        Yhdistä traineriin
-    </button>
-
-    <button id="requestControlBtn" disabled>
-        Request Control
-    </button>
-	
-	<button id="releaseBtn" disabled>
-		Release Trainer
-	</button>
-
-	<button id="startBtn" disabled>
-		Start Workout
-	</button>
-
-    <div id="log"></div>
-
+    <p>Elite Suito FTMS Controller<p>
 	<button id="power0Btn" class="bigPowerButton" disabled>
 		0 W
 	</button>
@@ -77,6 +62,25 @@
 	<button id="powerUpBtn" class="bigPowerButton" style="width: 315px;" disabled>
 		 +
 	</button>
+    <button id="connectBtn">
+        Yhdistä traineriin
+    </button>
+
+    <button id="requestControlBtn" disabled>
+        Request Control
+    </button>
+	
+	<button id="releaseBtn" disabled>
+		Release Trainer
+	</button>
+
+	<button id="startBtn" disabled>
+		Start Workout
+	</button>
+
+    <div id="log"></div>
+
+
 
     <script src="EliteControl.js"></script>
 
